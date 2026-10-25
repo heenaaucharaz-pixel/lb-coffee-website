@@ -1,0 +1,451 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LB's Coffee - Menu</title>
+
+       <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+
+        <a href="home.html" class="logo">
+            <img src="coffee.jpeg" alt="LB's Coffee Logo">
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+
+        <div class="nav-icons">
+            <a href="#" aria-label="Search">
+                <i class="fa fa-search"></i>
+            </a>
+
+            <a href="cart.html" aria-label="Shopping cart">
+                <i class="fa fa-shopping-cart"></i>
+            </a>
+
+            <a href="login.html" aria-label="Account">
+                <i class="fa fa-user"></i>
+            </a>
+        </div>
+
+</nav>
+ </header>
+<section class="menu-categories">
+    <button class="category-button active">All</button>
+    <button class="category-button">Burgers</button>
+    <button class="category-button">Pasta</button>
+    <button class="category-button">Drinks</button>
+    <button class="category-button">Desserts</button>
+</section>
+
+
+<section class="product-grid">
+    <div class="product-card">
+        <img src="crispy chicken burger.jpg" alt="Crispy Chicken Burger">
+
+        <div class="product-info">
+            <h3>Crispy Chicken Burger</h3>
+            <p>A crispy chicken burger served in a soft bun.</p>
+
+            <span class="product-price">Rs 250</span>
+
+            <div class="product-addons">
+                <h4>Customise your burger</h4>
+                <label>
+                    <input type="checkbox" value="60">
+                    Cheddar cheese <span>+ Rs 60</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="60">
+                    Emmental cheese <span>+ Rs 60</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="60">
+                    Gherkins <span>+ Rs 60</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="60">
+                    Fried egg <span>+ Rs 60</span>
+                </label>
+            </div>
+            <button class="add-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    
+    <div class="product-card">
+        <img src="smashed lamb burger.jpg" alt="Smashed Lamb Burger">
+
+        <div class="product-info">
+            <h3>Smash Lamb Burger</h3>
+            <p>A juicy lamb burger served in a soft bun.</p>
+
+            <span class="product-price">Rs 350</span>
+
+            <div class="product-addons">
+                <h4>Customise your burger</h4>
+
+                <label>
+                    <input type="checkbox" value="60">
+                    Cheddar cheese <span>+ Rs 60</span>
+                </label>
+
+                <label>
+                    <input type="checkbox" value="60">
+                    Emmental cheese <span>+ Rs 60</span>
+                </label>
+
+                <label>
+                    <input type="checkbox" value="60">
+                    Gherkins <span>+ Rs 60</span>
+                </label>
+
+                <label>
+                    <input type="checkbox" value="60">
+                    Fried egg <span>+ Rs 60</span>
+                </label>
+            </div>
+
+            <button class="add-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <img src="crispy paneer burger.jpg" alt="Crispy Paneer Burger">
+
+        <div class="product-info">
+            <h3>Crispy Paneer Burger</h3>
+            <p>Crispy paneer served in a soft burger bun.</p>
+
+            <span class="product-price">Rs 250</span>
+
+            <div class="product-addons">
+                <h4>Customise your burger</h4>
+
+                <label>
+                    <input type="checkbox" value="60">
+                    Cheddar cheese <span>+ Rs 60</span>
+                </label>
+
+                <label>
+                    <input type="checkbox" value="60">
+                    Emmental cheese <span>+ Rs 60</span>
+                </label>
+
+                <label>
+                    <input type="checkbox" value="60">
+                    Gherkins <span>+ Rs 60</span>
+                </label>
+
+                <label>
+                    <input type="checkbox" value="60">
+                    Fried egg <span>+ Rs 60</span>
+                </label>
+            </div>
+
+            <button class="add-cart">Add to Cart</button>
+        </div>
+    </div>
+
+
+
+<div class="product-card">
+    <img src="alfredo.jpg" alt="Chicken Alfredo Tagliatelle">
+    <div class="product-info">
+        <h3>Chicken Alfredo Tagliatelle</h3>
+        <p>Creamy Alfredo sauce served with tender tagliatelle pasta.</p>
+        <span class="product-price">Rs 225</span>
+        <div class="product-addons">
+            <h4>Customise your pasta</h4>
+            <label>
+                <input type="checkbox" value="60">
+                Chicken <span>+ Rs 60</span>
+            </label>
+            <label>
+                <input type="checkbox" value="60">
+                Vegetables <span>+ Rs 60</span>
+            </label>
+            <label>
+                <input type="checkbox" value="60">
+                Seafood <span>+ Rs 60</span>
+            </label>
+        </div>
+        <button class="add-cart">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+    <img src="pesto.jpg" alt="Mixed Veg Pesto Penne">
+
+    <div class="product-info">
+        <h3>Mixed Veg Pesto Penne</h3>
+        <p>Penne pasta tossed with pesto sauce and mixed vegetables.</p>
+
+        <span class="product-price">Rs 225</span>
+
+        <div class="product-addons">
+            <h4>Customise your pasta</h4>
+
+            <label>
+                <input type="checkbox" value="60">
+                Chicken <span>+ Rs 60</span>
+            </label>
+
+            <label>
+                <input type="checkbox" value="60">
+                Vegetables <span>+ Rs 60</span>
+            </label>
+
+            <label>
+                <input type="checkbox" value="60">
+                Seafood <span>+ Rs 60</span>
+            </label>
+        </div>
+
+        <button class="add-cart">Add to Cart</button>
+    </div>
+</div>
+
+
+<div class="product-card">
+    <img src="arrabiatta.jpg" alt="Seafood Spaghetti Arrabbiata">
+
+    <div class="product-info">
+        <h3>Seafood Spaghetti Arrabbiata</h3>
+        <p>Spaghetti served with seafood and a spicy Arrabbiata sauce.</p>
+
+        <span class="product-price">Rs 225</span>
+
+        <div class="product-addons">
+            <h4>Customise your pasta</h4>
+
+            <label>
+                <input type="checkbox" value="60">
+                Chicken <span>+ Rs 60</span>
+            </label>
+
+            <label>
+                <input type="checkbox" value="60">
+                Vegetables <span>+ Rs 60</span>
+            </label>
+
+            <label>
+                <input type="checkbox" value="60">
+                Seafood <span>+ Rs 60</span>
+            </label>
+        </div>
+
+        <button class="add-cart">Add to Cart</button>
+    </div>
+</div>
+
+
+
+<div class="product-card">
+    <img src="drink.jpg" alt="Flavoured Iced Tea">
+
+    <div class="product-info">
+        <h3>Iced Tea</h3>
+        <p>Refreshing iced tea available in your favourite flavour.</p>
+
+        <div class="product-addons">
+            <h4>Choose your flavour</h4>
+
+            <label>
+                <input type="radio" name="iced-tea-flavour" value="Mango">
+                Mango
+            </label>
+
+            <label>
+                <input type="radio" name="iced-tea-flavour" value="Strawberry">
+                Strawberry
+            </label>
+
+            <label>
+                <input type="radio" name="iced-tea-flavour" value="Lychee">
+                Lychee
+            </label>
+
+            <label>
+                <input type="radio" name="iced-tea-flavour" value="Peach">
+                Peach
+            </label>
+        </div>
+
+        <div class="product-addons">
+            <h4>Choose your size</h4>
+
+            <label>
+                <input type="radio" name="iced-tea-size" value="Regular">
+                Regular <span>Rs 160</span>
+            </label>
+
+            <label>
+                <input type="radio" name="iced-tea-size" value="Large">
+                Large <span>Rs 175</span>
+            </label>
+        </div>
+
+        <button class="add-cart">Add to Cart</button>
+    </div>
+</div>
+
+
+<div class="product-card">
+    <img src="ice blue latte.png" alt="Iced Blue Latte">
+
+    <div class="product-info">
+        <h3>Iced Blue Latte</h3>
+        <p>A chilled blue latte served over ice.</p>
+
+        <div class="product-addons">
+            <h4>Choose your size</h4>
+
+            <label>
+                <input type="radio" name="blue-latte-size" value="Regular">
+                Regular <span>Rs 160</span>
+            </label>
+
+            <label>
+                <input type="radio" name="blue-latte-size" value="Large">
+                Large <span>Rs 175</span>
+            </label>
+        </div>
+
+        <button class="add-cart">Add to Cart</button>
+    </div>
+</div>
+
+
+<div class="product-card">
+    <img src="americano sunrise.png" alt="Americano Sunrise">
+
+    <div class="product-info">
+        <h3>Americano Sunrise</h3>
+        <p>A refreshing iced Americano coffee.</p>
+
+        <div class="product-addons">
+            <h4>Choose your size</h4>
+
+            <label>
+                <input type="radio" name="americano-sunrise-size" value="Regular">
+                Regular <span>Rs 160</span>
+            </label>
+
+            <label>
+                <input type="radio" name="americano-sunrise-size" value="Large">
+                Large <span>Rs 175</span>
+            </label>
+        </div>
+
+        <button class="add-cart">Add to Cart</button>
+    </div>
+</div>
+
+
+
+<div class="product-card">
+    <img src="classic.jpg" alt="Classic Nutella Crepe">
+    <div class="product-info">
+        <h3>Classic Nutella Crepe</h3>
+        <p>A soft crepe filled with delicious Nutella.</p>
+        <span class="product-price">Rs 85</span>
+        <button class="add-cart">Add to Cart</button>
+    </div>
+</div>
+<div class="product-card">
+    <img src="fresh fruit crepe.jpg" alt="Fresh Fruit Crepe">
+    <div class="product-info">
+        <h3>Fresh Fruit Crepe</h3>
+        <p>A crepe filled with Nutella and fresh fruit, topped with condensed milk.</p>
+        <span class="product-price">Rs 125</span>
+        <button class="add-cart">Add to Cart</button>
+    </div>
+</div>
+
+
+</section>
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <!-- LBS Coffee and Social Media -->
+        <div class="footer-section footer-social">
+            <h3>LBS Coffee</h3>
+            <p>Visit our socials</p>
+
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook">
+                    <i class="fa fa-facebook"></i>
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa fa-instagram"></i>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="footer-section footer-visit">
+            <h3>Visit Us</h3>
+
+            <div class="map">
+                <iframe
+                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3746.4997400107245!2d57.58368527401712!3d-20.113188481316833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c55e1e68c25ad%3A0xedcd7b0b5bb234fa!2sLB's%20Coffee!5e0!3m2!1sen!2smu!4v1792665829148!5m2!1sen!2smu"
+                      width="600" 
+                      height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+                    
+            </div>
+
+            <p class="footer-location" >
+                Royal Road Pamplemousses
+            </p>
+
+            <h4>Opening Hours</h4>
+            <p>Monday - Sunday</p>
+               7.30 AM-14.00 PM
+
+            <p>   
+            </p>
+        </div>
+
+        
+        <div class="footer-section footer-links">
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 LBS Coffee. All Rights Reserved.</p>
+    </div>
+
+</footer>
+
+</body>
+
+</html>
+

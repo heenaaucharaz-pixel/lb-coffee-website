@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | LB's Coffee</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <a href="home.html" class="logo">
+                <img src="coffee.jpeg" alt="LB's Coffee Logo">
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="active">Login</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <a href="menu.html" aria-label="Search">
+                    <i class="fa fa-search"></i>
+                </a>
+
+                <a href="cart.html" aria-label="Shopping Cart">
+                    <i class="fa fa-shopping-cart"></i>
+                </a>
+
+                <a href="login.html" aria-label="Profile">
+                    <i class="fa fa-user"></i>
+                </a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <main class="login-container">
+        <div class="login-card">
+            <h1 id="form-title">Welcome Back</h1>
+            <p class="login-description" id="form-description">
+                Please sign in to your account
+            </p>
+            <div class="login-tabs">
+                <button type="button"
+                        class="tab-button active"
+                        id="login-tab">
+                    Login
+                </button>
+                <button type="button"
+                        class="tab-button"
+                        id="signup-tab">
+                    Create Account
+                </button>
+            </div>
+            <form class="login-form" id="login-form">
+                <div class="login-input">
+                    <label for="login-email">Email Address</label>
+                    <input type="email"
+                           id="login-email"
+                           name="email"
+                           placeholder="Enter your email"
+                           required>
+                </div>
+                <div class="login-input">
+                    <label for="login-password">Password</label>
+                    <input type="password"
+                           id="login-password"
+                           name="password"
+                           placeholder="Enter your password"
+                           required>
+                </div>
+                <button type="submit" class="login-submit">
+                    Login
+                </button>
+            </form>
+
+            <form class="signup-form" id="signup-form" hidden>
+                <div class="login-input">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text"
+                           id="signup-name"
+                           name="name"
+                           placeholder="Enter your full name"
+                           required>
+                </div>
+                <div class="login-input">
+                    <label for="signup-email">Email Address</label>
+                    <input type="email"
+                           id="signup-email"
+                           name="email"
+                           placeholder="Enter your email"
+                           required>
+                </div>
+                <div class="login-input">
+                    <label for="signup-password">Password</label>
+                    <input type="password"
+                           id="signup-password"
+                           name="password"
+                           placeholder="Create a password"
+                           required>
+                </div>
+                <button type="submit" class="login-submit">
+                    Sign Up
+                </button>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+    <div class="footer-content">
+
+        <div class="footer-section footer-social">
+            <h3>LBS Coffee</h3>
+            <p>Visit our socials</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-section footer-visit">
+            <h3>Visit Us</h3>
+            <div class="map">
+                <iframe
+                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3746.4997400107245!2d57.58368527401712!3d-20.113188481316833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c55e1e68c25ad%3A0xedcd7b0b5bb234fa!2sLB's%20Coffee!5e0!3m2!1sen!2smu!4v1792665829148!5m2!1sen!2smu"
+                      width="600" 
+                      height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>         
+            </div>
+            <p class="footer-location" >
+                Royal Road Pamplemousses
+            </p>
+            <h4>Opening Hours</h4>
+            <p>Monday - Sunday</p>
+               7.30 AM-14.00 PM
+            <p>   
+            </p>
+        </div>
+        <div class="footer-section footer-links">
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 LBS Coffee. All Rights Reserved.</p>
+    </div>
+
+</footer>
+
+    
+
+    <!-- JavaScript for Switching Forms -->
+    <script>
+
+        const loginTab = document.getElementById("login-tab");
+        const signupTab = document.getElementById("signup-tab");
+
+        const loginForm = document.getElementById("login-form");
+        const signupForm = document.getElementById("signup-form");
+
+        const formTitle = document.getElementById("form-title");
+        const formDescription = document.getElementById("form-description");
+
+
+        
+        loginTab.addEventListener("click", function() {
+
+            loginForm.hidden = false;
+            signupForm.hidden = true;
+
+            loginTab.classList.add("active");
+            signupTab.classList.remove("active");
+
+            formTitle.textContent = "Welcome Back";
+            formDescription.textContent = "Please sign in to your account";
+
+        });
+
+        signupTab.addEventListener("click", function() {
+
+            loginForm.hidden = true;
+            signupForm.hidden = false;
+
+            signupTab.classList.add("active");
+            loginTab.classList.remove("active");
+
+            formTitle.textContent = "Create Account";
+            formDescription.textContent = "Enter your details to get started";
+
+        });
+
+    </script>
+
+</body>
+</html>

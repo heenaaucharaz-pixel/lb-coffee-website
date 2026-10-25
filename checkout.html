@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | LB's Coffee</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+
+            <a href="home.html" class="logo">
+                <img src="coffee.jpeg" alt="LB's Coffee Logo">
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+
+            <div class="nav-icons">
+
+                <a href="menu.html" aria-label="Search">
+                    <i class="fa fa-search"></i>
+                </a>
+
+                <a href="cart.html" aria-label="Shopping Cart">
+                    <i class="fa fa-shopping-cart"></i>
+                </a>
+
+                <a href="login.html" aria-label="Profile">
+                    <i class="fa fa-user"></i>
+                </a>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="checkout-container">
+        <div class="checkout-box">
+
+            <div class="checkout-form">
+
+                <h1>Checkout</h1>
+
+                <form action="#" method="POST">
+
+                    <section class="checkout-section">
+
+                        <h2>Delivery Information</h2>
+
+                        <div class="checkout-input-row">
+
+                            <div class="checkout-input">
+                                <label for="full-name">Full Name</label>
+
+                                <input type="text"
+                                       id="full-name"
+                                       name="full_name"
+                                       placeholder="Enter your full name"
+                                       required>
+                            </div>
+                            <div class="checkout-input">
+                                <label for="email">Email Address</label>
+                                <input type="email"
+                                       id="email"
+                                       name="email"
+                                       placeholder="Enter your email address"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="checkout-input">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel"
+                                   id="phone"
+                                   name="phone"
+                                   placeholder="Enter your phone number"
+                                   required>
+                        </div>
+                        <div class="checkout-input">
+                            <label for="address">Delivery Address</label>
+
+                            <textarea id="address"
+                                      name="address"
+                                      placeholder="Enter your delivery address"
+                                      rows="4"
+                                      required></textarea>
+                        </div>
+
+                    </section>
+                    <section class="checkout-section">
+
+                        <h2>Delivery Option</h2>
+
+                        <div class="checkout-choice">
+
+                            <label class="choice-option">
+
+                                <input type="radio"
+                                       name="delivery"
+                                       value="standard"
+                                       required>
+
+                                <span>
+                                    <strong>Standard Delivery</strong>
+                                    <small>Delivery fee calculated at checkout</small>
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </section>
+
+
+                    <section class="checkout-section">
+
+                        <h2>Payment Method</h2>
+
+                        <div class="checkout-choice">
+
+                            <label class="choice-option">
+
+                                <input type="radio"
+                                       name="payment"
+                                       value="cash"
+                                       required>
+
+                                <span>
+                                    <strong>Cash on Delivery</strong>
+                                    <small>Pay when you receive your order</small>
+                                </span>
+
+                            </label>
+
+                            <label class="choice-option">
+
+                                <input type="radio"
+                                       name="payment"
+                                       value="online">
+
+                                <span>
+                                    <strong>Online Payment</strong>
+                                    <small>Pay securely through online payment</small>
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </section>
+
+
+                    <button type="submit" class="place-order-button">
+                        Place Order
+                        <i class="fa fa-arrow-right"></i>
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <aside class="checkout-summary">
+
+                <h2>Order Summary</h2>
+
+                <div class="checkout-products">
+
+                    <p>Your cart items will appear here.</p>
+
+                </div>
+
+                <div class="checkout-total-row">
+                    <span>Subtotal</span>
+                    <span>Rs 0</span>
+                </div>
+
+                <div class="checkout-total-row">
+                    <span>Delivery</span>
+                    <span>RS 175</span>
+                </div>
+
+                <div class="checkout-total-row estimated-total">
+                    <strong>Estimated Total</strong>
+                    <strong>Rs 0</strong>
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+    
+            <div class="footer-section">
+
+                <h3>LB's Coffee</h3>
+
+                <p>Visit our socials</p>
+
+                <div class="social-icons">
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-section">
+
+                <h3>Visit Us</h3>
+
+                <p>Royal Road Pamplemousses</p>
+
+                <div class="map">
+
+                    <iframe
+                        src="https://www.google.com/maps?q=Royal+Road+Pamplemousses+Mauritius&output=embed"
+                        width="100%"
+                        height="180"
+                        style="border:0;"
+                        allowfullscreen
+                        loading="lazy"
+                        title="Map showing Royal Road, Pamplemousses">
+                    </iframe>
+
+                </div>
+
+                <h4>Opening Hours</h4>
+
+                <p>Monday - Sunday</p>
+
+                <p>7:30 AM - 2:00 PM</p>
+
+            </div>
+
+
+      
+            <div class="footer-section">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+    
+        <div class="footer-bottom">
+
+            <p>&copy; 2026 LB's Coffee. All Rights Reserved.</p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
