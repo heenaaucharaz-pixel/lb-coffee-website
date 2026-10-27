@@ -12,7 +12,6 @@
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
 
 <body>
@@ -50,42 +49,55 @@
         </nav>
     </header>
 
-
-    
     <main class="cart-container">
+
         <div class="cart-box">
+
             <h2>My Cart</h2>
-            <section class="cart-items">
+
+            <section class="cart-items" id="cart-items">
                 <p class="empty-cart">
                     Your cart is currently empty.
                 </p>
             </section>
+
             <section class="cart-summary">
+
                 <h3>Summary</h3>
+
                 <div class="summary-row">
                     <span>Subtotal:</span>
-                    <span>Rs 0</span>
+                    <span id="cart-subtotal">Rs 0</span>
                 </div>
+
                 <div class="summary-row">
                     <span>Delivery:</span>
-                    <span>Rs 0</span>
+                    <span id="delivery-fee">Rs 0</span>
                 </div>
+
                 <div class="summary-row estimated-total">
                     <span>Estimated Total:</span>
-                    <span>Rs 0</span>
+                    <span id="cart-total">Rs 0</span>
                 </div>
+
                 <div class="cart-actions">
+
                     <a href="checkout.html" class="checkout-button">
                         Proceed to Checkout
                     </a>
+
                     <a href="menu.html" class="browse-button">
                         Continue Browsing
                     </a>
+
                 </div>
+
             </section>
+
         </div>
+
     </main>
-    
+
     <footer class="footer">
 
         <div class="footer-content">
@@ -153,8 +165,6 @@
 
         </div>
 
-
-
         <div class="footer-bottom">
 
             <p>&copy; 2026 LB's Coffee. All Rights Reserved.</p>
@@ -163,6 +173,10 @@
 
     </footer>
 
-</body>
+    <script src="menu.js"></script>
 
+</body>
 </html>
+
+
+        
