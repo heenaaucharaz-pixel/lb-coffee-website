@@ -1,5 +1,3 @@
-
-
 * {
     margin: 0;
     padding: 0;
@@ -55,10 +53,6 @@ body {
     color: #8b5e34;
 }
 
-
-/* ========================================
-   3. HERO BANNER
-======================================== */
 
 .hero {
     min-height: 500px;
@@ -239,10 +233,6 @@ body {
 }
 
 
-/* ========================================
-   6. ABOUT LBS COFFEE
-======================================== */
-
 .about-preview {
     display: flex;
     align-items: center;
@@ -280,10 +270,6 @@ body {
     margin-bottom: 15px;
 }
 
-
-/* ========================================
-   7. FOOTER
-======================================== */
 
 .footer {
     background-color: #2b211b;
@@ -467,7 +453,196 @@ body {
     }
 }
 
+```css
+/* PROFILE PAGE */
 
+.profile-heading {
+    background-color: #eee5d8;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.profile-heading h1 {
+    font-size: 36px;
+    color: #8b5e34;
+    margin-bottom: 10px;
+}
+
+.profile-heading p {
+    font-size: 16px;
+    color: #5c5148;
+}
+
+.profile-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.profile-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 35px;
+}
+
+.profile-avatar {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 15px;
+    background-color: #eee5d8;
+    color: #8b5e34;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+}
+
+.profile-card h2,
+.purchase-summary h2,
+.purchase-history h2 {
+    color: #8b5e34;
+    margin-bottom: 22px;
+}
+
+.profile-details {
+    max-width: 450px;
+    margin: 0 auto 25px;
+    text-align: left;
+}
+
+.profile-details p {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee5d8;
+    color: #4a4038;
+    overflow-wrap: anywhere;
+}
+
+.customer-status {
+    display: inline-block;
+    background-color: #e8f3e8;
+    color: #326b38;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 13px;
+}
+
+.profile-button {
+    display: inline-block;
+    background-color: #8b5e34;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.profile-button:hover {
+    background-color: #6f4829;
+}
+
+.purchase-summary {
+    margin-bottom: 40px;
+}
+
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.summary-card {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 25px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.summary-card i {
+    font-size: 28px;
+    color: #8b5e34;
+    margin-bottom: 12px;
+}
+
+.summary-card h3 {
+    color: #8b5e34;
+    font-size: 21px;
+    margin-bottom: 8px;
+    overflow-wrap: anywhere;
+}
+
+.summary-card p {
+    color: #665b52;
+    font-size: 14px;
+}
+
+.purchase-history {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.history-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.history-table th {
+    background-color: #eee5d8;
+    color: #5c3b23;
+    padding: 14px;
+}
+
+.history-table td {
+    padding: 14px;
+    border-bottom: 1px solid #eee5d8;
+    color: #4a4038;
+}
+
+.history-table tbody tr:hover {
+    background-color: #faf7f2;
+}
+
+.profile-note {
+    color: #776b60;
+    font-size: 13px;
+    margin-top: 18px;
+    line-height: 1.6;
+}
+
+/* PROFILE PAGE RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+    .summary-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-heading h1 {
+        font-size: 29px;
+    }
+
+    .profile-card,
+    .purchase-history {
+        padding: 20px;
+    }
+
+    .history-table {
+        min-width: 600px;
+    }
+}
+```
 
 .menu-categories {
     display: flex;
@@ -851,8 +1026,8 @@ a {
     text-decoration: none;
     color: inherit;
 }
-/* MAIN CONTACT SECTION */
-.contact-section {
+
+.contact-page {
     padding: 55px 24px;
     background: var(--cream);
 }
@@ -1034,8 +1209,6 @@ form {
 
 
 
-
-```css
 /* =========================
    CHECKOUT PAGE
 ========================= */
@@ -1385,4 +1558,181 @@ form {
     }
 
 }
-```
+
+
+
+
+
+
+
+
+
+.field-message,
+.password-strength {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.field-message:empty,
+.password-strength:empty {
+    display: none;
+}
+
+.field-message {
+    color: #b3261e;
+}
+
+.password-strength {
+    font-weight: bold;
+}
+
+
+.password-strength.strength-weak {
+    color: #b3261e;
+}
+
+.password-strength.strength-fair {
+    color: #b7791f;
+}
+
+.password-strength.strength-strong {
+    color: #2e7d32;
+}
+
+
+.product-message {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #2e7d32;
+}
+
+.product-message.error {
+    color: #b3261e;
+}
+
+
+/* Cart product layout */
+.cart-item {
+    display: grid;
+    grid-template-columns: 110px 1fr auto auto;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid #e5ddd5;
+}
+
+/* Cart product image */
+.cart-item img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Product information */
+.cart-item-details h3 {
+    margin: 0 0 8px;
+    font-size: 17px;
+}
+
+.cart-item-details p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Quantity controls */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.quantity-controls button {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #d8c8b8;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.cart-quantity {
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Product subtotal */
+.cart-item-subtotal {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Remove button */
+.remove-item {
+    grid-column: 2;
+    justify-self: start;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f4e8df;
+    color: #653c2c;
+    cursor: pointer;
+}
+
+/* Selected product options */
+.cart-item-options {
+    color: #77685e;
+    font-size: 13px;
+}
+
+/* Responsive cart layout */
+@media screen and (max-width: 600px) {
+    .cart-item {
+        grid-template-columns: 80px 1fr;
+        gap: 12px;
+    }
+
+    .cart-item img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .quantity-controls,
+    .cart-item-subtotal {
+        grid-column: 2;
+    }
+
+    .remove-item {
+        grid-column: 2;
+    }
+}
+
+
+.checkout-error {
+    display: block;
+    margin-top: 5px;
+    color: #b3261e;
+    font-size: 12px;
+}
+
+#checkout-message {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+
+
+
+.contact-error {
+    display: block;
+    margin-top: 5px;
+    color: #b3261e;
+    font-size: 12px;
+}
+
+#contact-form-message {
+    margin-top: 12px;
+    font-size: 14px;
+}
