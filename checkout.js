@@ -1,33 +1,24 @@
 
-// Selecting the checkout form and order summary elements
 const checkoutForm = document.querySelector(".checkout-form form");
 const checkoutProducts = document.querySelector(".checkout-products");
 const totalRows = document.querySelectorAll(".checkout-total-row");
 
-// Selecting the delivery information fields
 const fullName = document.getElementById("full-name");
 const email = document.getElementById("email");
 const phone = document.getElementById("phone");
 const address = document.getElementById("address");
 
-// Setting the delivery fee
 const deliveryFee = 175;
 
-
-// Creating a general feedback message
 const checkoutMessage = document.createElement("p");
 checkoutMessage.id = "checkout-message";
 checkoutMessage.setAttribute("aria-live", "polite");
 checkoutForm.appendChild(checkoutMessage);
 
-
-// Formatting prices in Mauritian rupees
 function formatPrice(amount) {
     return "Rs " + amount;
 }
 
-
-// Retrieving cart items from localStorage
 function getCart() {
     try {
         const cart = JSON.parse(localStorage.getItem("lbsCoffeeCart")) || [];
@@ -36,9 +27,6 @@ function getCart() {
         return [];
     }
 }
-
-
-// Displaying validation messages under the relevant fields
 function showFieldError(input, message) {
     let error = input.parentElement.querySelector(".checkout-error");
 
@@ -52,8 +40,6 @@ function showFieldError(input, message) {
     error.textContent = message;
 }
 
-
-// Validating the customer's full name
 function validateName() {
     const namePattern = /^[A-Za-zÀ-ÿ]+(?:[ '-][A-Za-zÀ-ÿ]+)*$/;
 
@@ -67,7 +53,6 @@ function validateName() {
 }
 
 
-// Validating the email address
 function validateEmail() {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -80,8 +65,6 @@ function validateEmail() {
     return true;
 }
 
-
-// Validating the phone number
 function validatePhone() {
     const digits = phone.value.replace(/\D/g, "");
     const phonePattern = /^\+?[\d\s()-]+$/;
@@ -97,9 +80,6 @@ function validatePhone() {
     showFieldError(phone, "");
     return true;
 }
-
-
-// Checking that a delivery address has been entered
 function validateAddress() {
     if (address.value.trim() === "") {
         showFieldError(address, "Please enter your delivery address.");
@@ -109,9 +89,6 @@ function validateAddress() {
     showFieldError(address, "");
     return true;
 }
-
-
-// Validating the selected delivery and payment options
 function validateOption(optionName, message) {
     const selectedOption = checkoutForm.querySelector(
         'input[name="' + optionName + '"]:checked'
@@ -139,8 +116,6 @@ function validateOption(optionName, message) {
     return true;
 }
 
-
-// Displaying cart products in the order summary
 function displayOrderSummary() {
     const cart = getCart();
 
@@ -189,7 +164,6 @@ function displayOrderSummary() {
 }
 
 
-// Rechecking fields when the customer corrects an invalid entry
 [
     [fullName, validateName],
     [email, validateEmail],
@@ -207,8 +181,6 @@ function displayOrderSummary() {
 
 });
 
-
-// Clearing payment and delivery warnings when an option is selected
 checkoutForm.querySelectorAll(
     'input[name="delivery"], input[name="payment"]'
 ).forEach(function(input) {
@@ -225,7 +197,6 @@ checkoutForm.querySelectorAll(
 });
 
 
-// Validating the form when the customer clicks Place Order
 checkoutForm.addEventListener("submit", function(event) {
 
     event.preventDefault();
@@ -234,20 +205,17 @@ checkoutForm.addEventListener("submit", function(event) {
 
     const cart = getCart();
 
-    // Preventing checkout when there are no products
     if (cart.length === 0) {
         checkoutMessage.textContent =
             "Your cart is empty. Please add products before checkout.";
         return;
     }
 
-    // Checking all delivery information
     const nameValid = validateName();
     const emailValid = validateEmail();
     const phoneValid = validatePhone();
     const addressValid = validateAddress();
 
-    // Checking the delivery and payment selections
     const deliveryValid = validateOption(
         "delivery",
         "Please select a delivery option."
@@ -258,7 +226,6 @@ checkoutForm.addEventListener("submit", function(event) {
         "Please select a payment method."
     );
 
-    // Displaying feedback based on the validation results
     if (
         nameValid &&
         emailValid &&
@@ -276,6 +243,4 @@ checkoutForm.addEventListener("submit", function(event) {
 
 });
 
-
-// Displaying the current cart when checkout loads
 displayOrderSummary();
